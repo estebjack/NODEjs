@@ -1,10 +1,10 @@
 const express = require('express')
 const app = express()
-
 app.use(express.json())
 
-const cors = require('cors')
+app.use(express.static('dist'))
 
+const cors = require('cors')
 app.use(cors())
 
 let notes = [
@@ -35,6 +35,7 @@ let notes = [
 
   app.get('/api/notes',(request, response)=>{
     response.json(notes)
+    console.log('HOLA')
   })
   
   app.post('/api/notes', (request, response) => {
