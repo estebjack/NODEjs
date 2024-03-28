@@ -2,6 +2,7 @@ POST  http://localhost:3001/api/notes
 Content-Type: application/json
 
 {
-    "content" : "vs cofde sres cloente"
+    "content": "a",
+    "important" : true
     
 }
